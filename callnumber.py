@@ -15,13 +15,11 @@ true를 return 하도록 solution 함수를 작성해주세요.
 '''
 def solution(phone_book):
     answer = True # 접두어가 없다는 가정하에 시작. 접두어가 존재 시 False반환
-    phone_book.sort() # 정렬하게되면, 119, 1195524421,
-    print(phone_book)
-    for i in range(len(phone_book)-1): # 총 3번의 비교 0. 1. 2
-        print(i)
+    phone_book.sort() # 정렬하게 되면, 119, 1195524421, 97674223
+    for i in range(len(phone_book)-1): #총 3번의 비교 0. 1. 2
         if phone_book[i] in phone_book[i+1]: 
-            # i번째가 i+1번째에 포함되어있으므로 접두어 확인
-             #i와 i+1를 비교해주니까, 반복문이 i-2번까지만 반복하면 되니까 len-1 탐색
+            #i번째가 i+1번째에 포함되어있으므로 접두어 확인
+            #i와 i+1를 비교해주니까, 반복문이 i-2번까지만 반복하면 되니까 len-1 탐색
             answer = False 
             break
     return answer
